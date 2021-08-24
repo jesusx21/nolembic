@@ -1,0 +1,22 @@
+{
+  "name": "nolembic",
+  "version": "1.0.0",
+  "description": "My version of python's alembic for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusx21/nolembic.git"
+  },
+  "keywords": [
+    "alembic", "migrations", "database", "knex"
+  ],
+  "author": "Jesus Agustin Peña Meza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusx21/nolembic/issues"
+  },
+  "homepage": "https://github.com/jesusx21/nolembic#readme"
+}
