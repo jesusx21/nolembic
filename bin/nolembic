@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const { Command } = require('commander');
+const Nolembic = require('../index')
+
+const program = new Command();
+
+program
+  .command('init')
+  .description('Add init configuration file')
+  .action(Nolembic.init)
+
+program.parse(process.argv)
