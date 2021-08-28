@@ -3,11 +3,23 @@
 const { Command } = require('commander');
 const Nolembic = require('../index')
 
-const program = new Command();
+async function build() {
+  const program = new Command();
 
-program
-  .command('init')
-  .description('Add init configuration file')
-  .action(Nolembic.init)
+  program
+    .command('init')
+    .description('Add init configuration file')
+    .action(Nolembic.init)
 
-program.parse(process.argv)
+  await program.parseAsync(process.argv)
+}
+
+build()
+  .then(() => {
+    console.log('Done');
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error(error.name, error.message);
+    process.exit(1);
+  });
