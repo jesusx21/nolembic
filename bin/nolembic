@@ -11,6 +11,11 @@ async function build() {
     .description('Add init configuration file')
     .action(Nolembic.init)
 
+    program
+      .command('autogenerate <name>')
+      .description('Creates a new migration with the latest changes on database')
+      .action(Nolembic.autogenerate)
+
   await program.parseAsync(process.argv)
 }
 
